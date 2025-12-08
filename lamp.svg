@@ -1,0 +1,50 @@
+<svg
+  class="lamp"
+  width="300"
+  height="300"
+  viewBox="0 0 200 200"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Lamp cord -->
+  <path
+    class="lamp__cord"
+    d="M100 0 V40"
+    stroke="#333"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- Lamp head -->
+  <ellipse cx="100" cy="80" rx="60" ry="35" fill="#ffd27d" stroke="#000" stroke-width="2"/>
+
+  <!-- Lamp light effect -->
+  <ellipse
+    class="lamp__light"
+    cx="100"
+    cy="120"
+    rx="70"
+    ry="35"
+    fill="yellow"
+    opacity="0"
+  />
+
+  <!-- Face -->
+  <!-- Left eye -->
+  <circle class="lamp__eye-left" cx="75" cy="75" r="6" fill="black" />
+
+  <!-- Right eye -->
+  <circle class="lamp__eye-right" cx="125" cy="75" r="6" fill="black" />
+
+  <!-- Tongue -->
+  <path
+    class="lamp__tongue"
+    d="M95 95 Q100 110 105 95"
+    fill="#ff6f6f"
+    stroke="#000"
+    stroke-width="1"
+  />
+
+  <!-- Lamp bottom/body -->
+  <ellipse cx="100" cy="140" rx="50" ry="20" fill="#ffaa4f" stroke="#000" stroke-width="2"/>
+</svg>
