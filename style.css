@@ -1,0 +1,66 @@
+:root{
+  --bg: #0f1720;
+  --panel: #111827;
+  --shade: #2b2f33;
+  --stand: #7b7f83;
+  --base: #686b6e;
+  --on: 0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  background: linear-gradient(180deg, #111218 0%, #081018 100%);
+  color:#e6eef8;
+  font-family: Inter, system-ui, sans-serif;
+  padding:24px;
+}
+
+.title{
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:0.6px;
+}
+
+.lamp-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.shade-top{ fill: var(--shade); }
+.shade-body{ fill: #242628; }
+.stand{ fill: var(--stand); }
+.base{ fill: var(--base); }
+
+.cord{
+  fill:none;
+  stroke:#a1a6ab;
+  stroke-width:3;
+  stroke-linecap:round;
+}
+
+.lamp__light{
+  transition: opacity 400ms ease, transform 400ms ease;
+  opacity: calc(var(--on) * 1);
+  transform: scale(calc(0.6 + var(--on) * 0.6));
+  filter: blur(6px);
+  fill: rgba(255,200,90,0.12);
+}
+
+.hint{
+  opacity:0.7;
+  font-size:14px;
+  margin-top:6px;
+}
+
+@media (max-width:420px){
+  .title{ font-size:22px }
+  svg.lamp{ width:220px; height:260px; }
+}
