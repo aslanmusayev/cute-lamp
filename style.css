@@ -1,66 +1,36 @@
-:root{
-  --bg: #0f1720;
-  --panel: #111827;
-  --shade: #2b2f33;
-  --stand: #7b7f83;
-  --base: #686b6e;
-  --on: 0;
+body {
+  margin: 0;
+  background: #0f1828;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
-  background: linear-gradient(180deg, #111218 0%, #081018 100%);
-  color:#e6eef8;
-  font-family: Inter, system-ui, sans-serif;
-  padding:24px;
+.title {
+  color: white;
+  margin-top: 40px;
+  font-size: 40px;
 }
 
-.title{
-  font-size:28px;
-  font-weight:600;
-  letter-spacing:0.6px;
+.container {
+  margin-top: 50px;
 }
 
-.lamp-wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
+.lamp {
+  width: 200px;
+  animation: float 2.5s ease-in-out infinite;
+  cursor: pointer;
 }
 
-.shade-top{ fill: var(--shade); }
-.shade-body{ fill: #242628; }
-.stand{ fill: var(--stand); }
-.base{ fill: var(--base); }
-
-.cord{
-  fill:none;
-  stroke:#a1a6ab;
-  stroke-width:3;
-  stroke-linecap:round;
+/* Lampanın yüngül yellənməsi */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }
 
-.lamp__light{
-  transition: opacity 400ms ease, transform 400ms ease;
-  opacity: calc(var(--on) * 1);
-  transform: scale(calc(0.6 + var(--on) * 0.6));
-  filter: blur(6px);
-  fill: rgba(255,200,90,0.12);
-}
-
-.hint{
-  opacity:0.7;
-  font-size:14px;
-  margin-top:6px;
-}
-
-@media (max-width:420px){
-  .title{ font-size:22px }
-  svg.lamp{ width:220px; height:260px; }
+/* Lamp klik olunanda işıqlanma */
+.lamp.on {
+  filter: drop-shadow(0 0 30px yellow);
 }
