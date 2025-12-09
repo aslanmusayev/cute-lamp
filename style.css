@@ -1,36 +1,33 @@
 body {
-  margin: 0;
-  background: #0f1828;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background: #0f141c;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .title {
-  color: white;
-  margin-top: 40px;
-  font-size: 40px;
+    margin-top: 40px;
+    font-size: 36px;
 }
 
-.container {
-  margin-top: 50px;
+.lamp-wrapper {
+    margin-top: 40px;
 }
 
 .lamp {
-  width: 200px;
-  animation: float 2.5s ease-in-out infinite;
-  cursor: pointer;
+    width: 40vmin;
+    cursor: pointer;
 }
 
-/* Lampanın yüngül yellənməsi */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+/* cord color dynamic */
+.lamp__cord {
+    stroke: var(--cord, #ccc);
 }
 
-/* Lamp klik olunanda işıqlanma */
-.lamp.on {
-  filter: drop-shadow(0 0 30px yellow);
+/* light on/off */
+.lamp__light {
+    opacity: var(--on, 0);
+    transition: opacity 0.4s ease-in-out;
 }
