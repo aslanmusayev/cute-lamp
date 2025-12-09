@@ -1,5 +1,6 @@
-const lamp = document.getElementById("lamp");
+const lamp = document.querySelector(".lamp");
+const light = document.querySelector(".lamp__light");
 
 lamp.addEventListener("click", () => {
-  lamp.classList.toggle("on");
+    light.style.opacity = light.style.opacity === "1" ? "0" : "1";
 });
