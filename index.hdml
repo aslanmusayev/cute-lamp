@@ -11,26 +11,30 @@
 <h1 class="title">Cute Lamp</h1>
 
 <div class="lamp-wrapper">
-    <svg class="lamp" viewBox="0 0 200 300">
-        <!-- LAMP SHADE -->
-        <ellipse cx="100" cy="70" rx="60" ry="30" fill="#444"/>
-        <rect x="40" y="70" width="120" height="80" rx="10" fill="#333"/>
+    <svg class="lamp" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
 
-        <!-- EYES -->
-        <path d="M70 110 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
-        <path d="M110 110 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
+        <!-- Shade top -->
+        <ellipse cx="100" cy="50" rx="60" ry="25" fill="#444" />
 
-        <!-- STAND -->
-        <rect x="90" y="150" width="20" height="80" fill="#666"/>
+        <!-- Shade body -->
+        <rect x="40" y="50" width="120" height="80" rx="10" fill="#333" />
 
-        <!-- BASE -->
-        <ellipse cx="100" cy="240" rx="50" ry="15" fill="#777"/>
+        <!-- Eyes -->
+        <path d="M70 95 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
+        <path d="M110 95 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
 
-        <!-- CORD -->
-        <path class="lamp__tongue" d="M130 150 q40 60 -10 100" stroke-width="5" fill="none"/>
+        <!-- Stand -->
+        <rect x="90" y="130" width="20" height="70" fill="#666" />
 
-        <!-- LIGHT GLOW -->
-        <ellipse class="lamp__light" cx="100" cy="180" rx="80" ry="40" fill="yellow" opacity="0"/>
+        <!-- Base -->
+        <ellipse cx="100" cy="210" rx="50" ry="15" fill="#777" />
+
+        <!-- Pull cord -->
+        <path class="lamp__tongue" d="M130 130 q30 50 -10 90" stroke-width="5" fill="none"/>
+
+        <!-- Light glow -->
+        <ellipse class="lamp__light" cx="100" cy="160" rx="80" ry="35"
+                 fill="yellow" opacity="0"/>
     </svg>
 </div>
 
