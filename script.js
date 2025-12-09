@@ -1,16 +1,13 @@
-const lamp = document.querySelector(".lamp");
-const light = document.querySelector(".lamp__light");
+// Sadə toggle skripti — kliklə --on dəyərini 0/1 edir
+const wrapper = document.querySelector('.lamp-wrapper');
+const root = document.documentElement;
 
-let lampOn = false;
+let isOn = false;
+function setOn(v){
+  isOn = !!v;
+  root.style.setProperty('--on', isOn ? '1' : '0');
+}
+wrapper.addEventListener('click', ()=> setOn(!isOn));
 
-lamp.addEventListener("click", () => {
-    lampOn = !lampOn;
-
-    if (lampOn) {
-        light.style.opacity = "1";
-        lamp.classList.add("on");
-    } else {
-        light.style.opacity = "0";
-        lamp.classList.remove("on");
-    }
-});
+// Başlanğıc (sönük)
+setOn(false);
