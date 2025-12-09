@@ -1,5 +1,6 @@
 const lamp = document.querySelector(".lamp");
-const light = document.querySelector(".lamp__light");
+const light = document.querySelector(".lamp__light")
+;
 
 let lampOn = false;
 
