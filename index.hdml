@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cute Lamp</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Lamp</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="title">Cute Lamp</h1>
+    <h1 class="title">Cute Lamp</h1>
 
-  <div class="container">
-    <img src="lamp.svg" class="lamp" id="lamp" alt="Cute Lamp" />
-  </div>
+    <div class="container">
+        <!-- Lampa SVG -->
+        <svg class="lamp" viewBox="0 0 200 300">
+            <!-- Lampa başlığı -->
+            <ellipse cx="100" cy="80" rx="60" ry="40" fill="#333" />
+            <rect x="60" y="80" width="80" height="80" fill="#333" rx="20" />
 
-  <script src="script.js"></script>
+            <!-- Üz -->
+            <circle cx="80" cy="120" r="5" fill="#111"/>
+            <circle cx="120" cy="120" r="5" fill="#111"/>
+
+            <!-- Dil -->
+            <ellipse class="lamp__tongue" cx="100" cy="145" rx="12" ry="6" />
+
+            <!-- Ayaq -->
+            <rect x="95" y="160" width="10" height="100" fill="#444"/>
+
+            <!-- İşıq -->
+            <circle class="lamp__light" cx="100" cy="260" r="40" fill="yellow" opacity="0"/>
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
