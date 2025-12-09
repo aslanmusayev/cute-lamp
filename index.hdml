@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cute Lamp</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="title">Cute Lamp</h1>
+<h1 class="title">Cute Lamp</h1>
 
-    <div class="container">
-        <!-- Lampa SVG -->
-        <svg class="lamp" viewBox="0 0 200 300">
-            <!-- Lampa başlığı -->
-            <ellipse cx="100" cy="80" rx="60" ry="40" fill="#333" />
-            <rect x="60" y="80" width="80" height="80" fill="#333" rx="20" />
+<div class="lamp-wrapper">
+    <svg class="lamp" viewBox="0 0 200 300">
+        <!-- LAMP SHADE -->
+        <ellipse cx="100" cy="70" rx="60" ry="30" fill="#444"/>
+        <rect x="40" y="70" width="120" height="80" rx="10" fill="#333"/>
 
-            <!-- Üz -->
-            <circle cx="80" cy="120" r="5" fill="#111"/>
-            <circle cx="120" cy="120" r="5" fill="#111"/>
+        <!-- EYES -->
+        <path d="M70 110 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
+        <path d="M110 110 q10 10 20 0" stroke="#111" stroke-width="5" fill="none"/>
 
-            <!-- Dil -->
-            <ellipse class="lamp__tongue" cx="100" cy="145" rx="12" ry="6" />
+        <!-- STAND -->
+        <rect x="90" y="150" width="20" height="80" fill="#666"/>
 
-            <!-- Ayaq -->
-            <rect x="95" y="160" width="10" height="100" fill="#444"/>
+        <!-- BASE -->
+        <ellipse cx="100" cy="240" rx="50" ry="15" fill="#777"/>
 
-            <!-- İşıq -->
-            <circle class="lamp__light" cx="100" cy="260" r="40" fill="yellow" opacity="0"/>
-        </svg>
-    </div>
+        <!-- CORD -->
+        <path class="lamp__tongue" d="M130 150 q40 60 -10 100" stroke-width="5" fill="none"/>
 
-    <script src="script.js"></script>
+        <!-- LIGHT GLOW -->
+        <ellipse class="lamp__light" cx="100" cy="180" rx="80" ry="40" fill="yellow" opacity="0"/>
+    </svg>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
